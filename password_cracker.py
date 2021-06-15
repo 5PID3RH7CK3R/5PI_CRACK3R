@@ -24,7 +24,12 @@ def readwordlist(url):
     return wordlistfile
  
 def hash(wordlistpassword):
-	
+
+	# You can view the Hashing Algos that hashlib supports in the given link
+	# https://docs.python.org/3/library/hashlib.html#hash-algorithms
+	# To change the algorithm, edit the line below
+	# Also, i could have added an option to pick the algo during runtime, but for some reason, python kept on giving me an indentation error. I had no idea what was causing the error.
+
     result = hashlib.sha1(wordlistpassword.encode())
     return result.hexdigest()
  
@@ -42,7 +47,7 @@ def local():
 
 	guesspasswordlist = []
 	if skip == 0:
-		actual_password_hash = input("\nEnter hash\n\n>> ")
+		actual_password_hash = input("\nEnter hash\nTo edit the hashing algorithm, head on over to line 28 inside the script\n\n>> ")
 		guesspasswordlist_path = input("\nEnter wordlist path\nPlease give the Full Path, unless the wordlist is in the same folder as this script\n\n>> ")
 	enc = int(input("\nIs the encoding\n1) Ascii.\n2) UTF-8.\n3) Check\n\n>> "))
 
@@ -62,7 +67,7 @@ def local():
 	    print("T\nThere was an error while reading the wordlist ->", error)
 	    exit()
 
-	print("\nProcessing Wordlist.\nTime taken will depend upon the length of the wordlist.\n ")
+	print("\nProcessing Wordlist.\nTime taken will depending upon the length of the wordlist.\n ")
 
 	for linee in guesspasswordlistfile:
 		word = linee
@@ -74,14 +79,23 @@ def local():
 	bruteforce(guesspasswordlist, actual_password_hash)
 
 def online():
-	url = input("\nEnter url.\nIt should end in .txt\n\n>> ")
+
+	# Preferred wordlists -> https://github.com/danielmiessler/SecLists/tree/master/Passwords/Common-Credentials
+	# Enter the raw.github.com url while executing
+	# For Example -> https://raw.githubusercontent.com/danielmiessler/SecLists/master/Passwords/Common-Credentials/10-million-password-list-top-1000000.txt
+
+	url = input("\nEnter url.\nIt should be a raw file ending in .txt (head over to line 87 inside the script for more info)\n\n>> ")
 	actual_password_hash = input("\nEnter password hash\n\n>> ")
-	print("\nProcessing Wordlist.\nTime taken will depend upon the length of the wordlist and your internet connection\n ")
+	print("\nProcessing Wordlist.\nTime taken will depending upon the length of the wordlist and your internet connection\n ")
 	wordlist = readwordlist(url).decode('UTF-8')
 	guesspasswordlist = wordlist.split('\n')
 
 	print('\nBruteforcing now\n')
 	bruteforce(guesspasswordlist, actual_password_hash)
+
+print("Welcome to the Bare-Bones Password Cracker by 5PID3RH7CK3R")
+print("There have been some measures taken to avoid script-kiddie abuse. Script settings are within the code itself.\nWherever you see comments, you can read through and edit accordingly.")
+
 
 check_online = int(input("""\nIs your wordlist TEXT file
 

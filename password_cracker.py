@@ -72,7 +72,6 @@ def local():
 	for linee in guesspasswordlistfile:
 		word = linee
 		guesspasswordlist.append(word[:-1]) 
-		# text_guesspasswordlist = convertTuple(guesspasswordlist)
 	guesspasswordlistfile.close()
 
 	print('\nBruteforcing now\n')

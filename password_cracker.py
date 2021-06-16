@@ -28,7 +28,7 @@ def hash(wordlistpassword):
 	# You can view the Hashing Algos that hashlib supports in the given link
 	# https://docs.python.org/3/library/hashlib.html#hash-algorithms
 	# To change the algorithm, edit the line below
-	# Also, i could have added an option to pick the algo during runtime, but for some reason, python kept on giving me an indentation error. I had no idea what was causing the error.
+	# Also, i could have added an option to pick the algo during runtime, but for some reason, python kept on giving me an indentation error. The reason behind it is that I used 2 different text editors and now my tabs are messed up lol. Gonna fix this later.
 
     result = hashlib.sha1(wordlistpassword.encode())
     return result.hexdigest()

@@ -64,7 +64,7 @@ def local():
 	try:
 	    guesspasswordlistfile = codecs.open(guesspasswordlist_path, mode='r', encoding=encodee, errors='ignore', buffering=-1)
 	except Exception as error:
-	    print("T\nThere was an error while reading the wordlist ->", error)
+	    print("\nThere was an error while reading the wordlist ->", error)
 	    exit()
 
 	print("\nProcessing Wordlist.\nTime taken will depending upon the length of the wordlist.\n ")

@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+# Script works on both linux and windows. The only thing that does not workn in windows is checking the file encoding if the wordlist is local
 
 import hashlib
 import codecs

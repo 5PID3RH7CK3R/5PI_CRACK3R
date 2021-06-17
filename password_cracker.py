@@ -97,6 +97,7 @@ def askhash():
 9)  sha3_512
 10) shake_128 [Under dev]
 11) shake_256 [Under dev]
+12) [adding more ...]
 
 >> """))
 

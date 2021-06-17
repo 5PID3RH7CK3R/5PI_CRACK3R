@@ -1,5 +1,5 @@
-# Barebones Password Cracker
-## Cracks hashes with nothing very fancy   
+# 5PI_CRACK3R
+## Cracks hashes surprisingly fast with nothing very fancy   
 
 #### Supports local as well as online wordlists and is descently fast at cracking hashes
 

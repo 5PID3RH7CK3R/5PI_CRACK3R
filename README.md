@@ -1,5 +1,5 @@
 # 5PI_CRACK3R
-## Cracks hashes surprisingly fast with nothing very fancy   
+## Cracks hashes surprisingly fast with nothing very fancy to slow you down   
 
 #### Supports local as well as online wordlists and is descently fast at cracking hashes
 
@@ -18,5 +18,3 @@
 10)  sha3_512
 11) shake_128 [Under dev]
 12) shake_256 [Under dev]
-
-

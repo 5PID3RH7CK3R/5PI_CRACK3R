@@ -80,6 +80,7 @@ def bruteforce(guesspasswordlist, actual_password_hash):
 		if hash(guess_password) == actual_password_hash:
 			print("\nYour password is:", guess_password)
 			# If the password is found then it will terminate the script here
+                        input()
 			exit()
 
 def askhash():
